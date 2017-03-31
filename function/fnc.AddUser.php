@@ -60,11 +60,26 @@ if (!empty($_POST)) {
     if (empty($error)) {
         $password = password_hash($password, PASSWORD_DEFAULT);
         if (setUser($pseudo, $email, $password)) {
-        header("location: ?page=home");
-        exit;
+            header("location: ?page=home");
+            exit;
+        } else {
+            array_push($error, array(
+                "field" => "globalerror",
+                "message" => "Le formulaire n'a pas été correctement remplis."
+            ));
+            array_push($error, array(
+                "field" => "deja present",
+                "message" => "deja present."
+            ));
+            echo "<ul>";
+            foreach ($error as $key => $value) {
+                echo "<li>" . $value["message"] . "</li><br>";
+            }
+            echo "</ul>";
         }
-        }
+
     } else {
+        echo "error";
         array_push($error, array(
             "field" => "globalerror",
             "message" => "Le formulaire n'a pas été correctement remplis."
@@ -76,4 +91,3 @@ if (!empty($_POST)) {
         echo "</ul>";
     }
 }
-
