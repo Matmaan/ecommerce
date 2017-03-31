@@ -14,7 +14,7 @@
               <div class="container">
                 <!-- Brand and toggle get grouped for better mobile display -->
                 <div class="navbar-header">
-                  <a class="navbar-brand" href="?page=0">Ecommerce</a>
+                  <a class="navbar-brand" href="?page=home">Ecommerce</a>
                 </div>
 
                 <!-- Collect the nav links, forms, and other content for toggling -->
@@ -26,7 +26,7 @@
                   </ul>
 
                   <ul class="nav navbar-nav navbar-right">
-                    <li><a href="?page=30">Inscription</a></li>
+                    <li><a href="?page=inscription">Inscription</a></li>
                     <li><a href="?page=31">Connexion</a></li>
 
                   </ul>
