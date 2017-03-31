@@ -20,16 +20,9 @@
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div>
                   <ul class="nav navbar-nav">
-                      <?php if (true): ?>
-                          <?php foreach(getCategories() as $category): ?>
-                              <li><a href="#"><?php echo $category->name; ?></a></li>
-                          <?php endforeach; ?>
-                    <?php elseif:?>      
-                    <li><a href="?page=12">Catégorie 1</a></li>
-                    <li><a href="?page=10">Catégorie 2</a></li>
-                    <li><a href="?page=11">Catégorie 3</a></li>
-                    <li><a href="?page=13">Catégorie 4</a></li>
-                    <?php endif; ?>
+                  <?php foreach(getCategories() as $category): ?>
+                      <li><a href="#"><?php echo $category->category; ?></a></li>
+                  <?php endforeach; ?>
                   </ul>
 
                   <ul class="nav navbar-nav navbar-right">
