@@ -4,6 +4,7 @@
 --
 -- Client :  127.0.0.1
 -- Généré le :  Ven 31 Mars 2017 à 16:36
+
 -- Version du serveur :  10.1.19-MariaDB
 -- Version de PHP :  5.6.28
 
