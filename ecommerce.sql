@@ -3,7 +3,9 @@
 -- http://www.phpmyadmin.net
 --
 -- Client :  127.0.0.1
--- Généré le :  Ven 31 Mars 2017 à 12:07
+
+-- Généré le :  Ven 31 Mars 2017 à 12:21
+
 -- Version du serveur :  10.1.19-MariaDB
 -- Version de PHP :  5.6.28
 
@@ -45,7 +47,7 @@ CREATE TABLE `users` (
   `id_user` int(11) NOT NULL,
   `email` varchar(255) NOT NULL,
   `password` text NOT NULL,
-  `role` varchar(55) NOT NULL,
+  `role` varchar(55) DEFAULT 'user',
   `login` varchar(255) NOT NULL,
   `registered_at` datetime NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
