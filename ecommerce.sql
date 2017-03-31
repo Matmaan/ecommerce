@@ -3,13 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Client :  127.0.0.1
-<<<<<<< HEAD
--- Généré le :  Ven 31 Mars 2017 à 13:54
-=======
-
--- Généré le :  Ven 31 Mars 2017 à 12:21
-
->>>>>>> origin/master
+-- Généré le :  Ven 31 Mars 2017 à 14:34
 -- Version du serveur :  10.1.19-MariaDB
 -- Version de PHP :  5.6.28
 
@@ -68,9 +62,9 @@ CREATE TABLE `product` (
 --
 
 INSERT INTO `product` (`id_product`, `id_category`, `name`, `description`, `image`, `price`, `quantity`) VALUES
-(1, 1, 'Le grand méchant loup', 'BOUH ! Vous allez vous pisser dessus', '', 0, 0),
-(3, 2, 'Nuit en folie', 'Vous êtes accompagné(e) de la personne de votre choix et elle vous fiat bien ce que vous voulez...', 'https://static.pexels.com/photos/570/sunny-summer-catcher-feathers.jpg', 0, 0),
-(4, 3, 'Le crush', 'Vous êtes tout ce que vous avez rêver d''être à l''âge ingrat', 'https://www.pexels.com/photo/girls-on-white-red-jersey-playing-hand-game-163465/', 0, 0);
+(1, 1, 'Le grand méchant loup', 'BOUH ! Vous allez vous pisser dessus', '', 25, 0),
+(3, 2, 'Nuit en folie', 'Vous êtes accompagné(e) de la personne de votre choix et elle vous fiat bien ce que vous voulez...', 'https://static.pexels.com/photos/570/sunny-summer-catcher-feathers.jpg', 125, 0),
+(4, 3, 'Le crush', 'Vous êtes tout ce que vous avez rêvé d''être à l''âge ingrat', 'https://www.pexels.com/photo/girls-on-white-red-jersey-playing-hand-game-163465/', 100, 0);
 
 -- --------------------------------------------------------
 
@@ -108,7 +102,8 @@ ALTER TABLE `product`
 -- Index pour la table `users`
 --
 ALTER TABLE `users`
-  ADD PRIMARY KEY (`id_user`);
+  ADD PRIMARY KEY (`id_user`),
+  ADD UNIQUE KEY `email` (`email`);
 
 --
 -- AUTO_INCREMENT pour les tables exportées
