@@ -3,7 +3,7 @@
 ?>
 
 <main>
-	<form>
+	<form method="POST">
 		<label for="login" class="">Pseudo :</label>
 		<input type="text" name="login" class="form-control">
 		<label for="mail" class="">E-mail :</label>
