@@ -11,12 +11,13 @@ if (!empty($_POST)) {
     // verif
 
     if (true) {
-        setUser($pseudo, $email, $password);
+        // cid = client Id
+        $_SESSION["cid"] = setUser($pseudo, $email, $password);
+        header("location: ?page=home");
+        exit;
     } else {
         echo "Erreur dans les infos.";
     }
 
-    header("location: ?page=home");
-    exit;
     // print_r($_POST);
 }
