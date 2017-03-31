@@ -4,7 +4,7 @@
 --
 -- Client :  127.0.0.1
 
--- Généré le :  Ven 31 Mars 2017 à 14:34
+-- Généré le :  Ven 31 Mars 2017 à 15:39
 
 -- Version du serveur :  10.1.19-MariaDB
 -- Version de PHP :  5.6.28
@@ -105,7 +105,8 @@ ALTER TABLE `product`
 --
 ALTER TABLE `users`
   ADD PRIMARY KEY (`id_user`),
-  ADD UNIQUE KEY `email` (`email`);
+  ADD UNIQUE KEY `email` (`email`),
+  ADD UNIQUE KEY `login` (`login`);
 
 --
 -- AUTO_INCREMENT pour les tables exportées
