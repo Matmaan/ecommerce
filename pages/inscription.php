@@ -1,5 +1,5 @@
 <?php
-include_once '../function/fnc.AddUser.php';
+include_once 'function/fnc.AddUser.php';
 ?>
 
 <main>
@@ -13,4 +13,5 @@ include_once '../function/fnc.AddUser.php';
 		<br>
 		<button type="submit" class="btn btn-default btn-primary">Inscription</button>
 	</form>
+	<?php var_dump($_POST);?>
 </main>

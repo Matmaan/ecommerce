@@ -14,22 +14,21 @@
               <div class="container">
                 <!-- Brand and toggle get grouped for better mobile display -->
                 <div class="navbar-header">
-                  <a class="navbar-brand" href="?page=0">Ecommerce</a>
+                  <a class="navbar-brand" href="?page=home">Ecommerce</a>
                 </div>
 
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div>
                   <ul class="nav navbar-nav">
-                    <li><a href="?page=12">Catégorie 1</a></li>
-                    <li><a href="?page=10">Catégorie 2</a></li>
-                    <li><a href="?page=11">Catégorie 3</a></li>
-                    <li><a href="?page=13">Catégorie 4</a></li>
+                  <?php foreach(getCategories() as $category): ?>
+                      <li><a href="#"><?php echo $category->category; ?></a></li>
+                  <?php endforeach; ?>
                   </ul>
 
                   <ul class="nav navbar-nav navbar-right">
-                    <li><a href="?page=30">Inscription</a></li>
+                    <li><a href="?page=inscription">Inscription</a></li>
                     <li><a href="?page=31">Connexion</a></li>
-                    
+
                   </ul>
 
                   <form  action="?page=99" class="navbar-form navbar-right">
