@@ -1,5 +1,5 @@
 <?php
-
+include_once '../function/fnc.AddUser.php';
 ?>
 
 <main>
