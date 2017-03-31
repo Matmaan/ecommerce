@@ -3,6 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Client :  127.0.0.1
+
 -- Généré le :  Ven 31 Mars 2017 à 16:36
 
 -- Version du serveur :  10.1.19-MariaDB
@@ -125,7 +126,8 @@ ALTER TABLE `product`
 --
 ALTER TABLE `users`
   ADD PRIMARY KEY (`id_user`),
-  ADD UNIQUE KEY `email` (`email`);
+  ADD UNIQUE KEY `email` (`email`),
+  ADD UNIQUE KEY `login` (`login`);
 
 --
 -- AUTO_INCREMENT pour les tables exportées
