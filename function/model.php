@@ -23,3 +23,4 @@ function setUser($pseudo, $email, $password) {
     // Récupération du dernier enregistrement (ID)
     return $bdd->lastInsertId();
 }
+
