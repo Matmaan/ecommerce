@@ -57,14 +57,16 @@ if (!empty($_POST)) {
         // Pseudo avec minimum 4caractères et n'existe pas en bdd
 
     if (empty($error)) {
+        $password = password_hash($password, PASSWORD_DEFAULT);
         if (setUser($pseudo, $email, $password)) {
         header("location: ?page=home");
         exit;
-        } 
+        }
+        }
     } else {
         array_push($error, array(
-            "field" => "unique",
-            "message" => "Votre pseudo ou votre adresse mail est déjà utilisé."
+            "field" => "globalerror",
+            "message" => "Le formulaire n'a pas été correctement remplis."
         ));
         echo "<ul>";
         foreach ($error as $key => $value) {
