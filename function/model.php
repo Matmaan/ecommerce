@@ -18,9 +18,11 @@ function setUser($pseudo, $email, $password) {
     $query->bindParam(':password', $password, PDO::PARAM_STR);
 
     // Executiuon de la requete
-    $query->execute();
+    if ($query->execute()) {
+        // Récupération du dernier enregistrement (ID)
+        return $bdd->lastInsertId();
+    }
 
-    // Récupération du dernier enregistrement (ID)
-    return $bdd->lastInsertId();
+    return false;
 }
 
