@@ -1,33 +1,22 @@
 <?php
 
-include_once '../config.php';
+echo "test";
 
 
+if (!empty($_POST)) {
+    $pseudo     = $_POST['login'];
+    $email      = $_POST['mail'];
+    $password   = $_POST['pswd'];
 
-    $pseudo = $_POST['login'];
-    $email = $_POST['mail'];
-    $password = $_POST['pswd'];
+    // verif
 
-    // On définit $bdd comme etant une variable globale
-    global $bdd;
+    if (true) {
+        setUser($pseudo, $email, $password);
+    } else {
+        echo "Erreur dans les infos.";
+    }
 
-    // Preparation de la requete
-    $query = $bdd->prepare("INSERT INTO `users`(email, password, login, registered_at) VALUES (:email,:password,:pseudo,NOW())");
-
-    // BindValue
-    $query->bindParam(':pseudo', $pseudo, PDO::PARAM_STR);
-    $query->bindParam(':email', $email, PDO::PARAM_STR);
-    $query->bindParam(':password', $password, PDO::PARAM_STR);
-
-    // Executiuon de la requete
-    $query->execute();
-
-    // Récupération du dernier enregistrement (ID)
-    return $bdd->lastInsertId();
-
-    print_r($_POST);
-
-
-
-
-
+    header("location: ?page=home");
+    exit;
+    // print_r($_POST);
+}
