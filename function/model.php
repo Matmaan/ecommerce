@@ -24,3 +24,10 @@ function setUser($pseudo, $email, $password) {
     return $bdd->lastInsertId();
 }
 
+function getProducts($nbProducts, $category = null) {
+    global $bdd;
+
+    $query = $bdd->query("SELECT * FROM product ORDER BY id_product DESC LIMIT $nbProducts");
+
+    return $query->fetchAll(PDO::FETCH_OBJ);
+}
