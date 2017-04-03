@@ -1,5 +1,13 @@
 <?php
-
+    $username = "root";
+    $password = "";
+    $host = "localhost";
+    $dbname = "ecommerce";
+try {
+$conn = new PDO("mysql:host={$host};dbname={$dbname};charset=utf8", $username, $password);
+}catch(PDOException $ex) {
+    $msg = "La connexion à la base de données a échouée";
+}
 // Was the form submitted?
 if (isset($_POST["ForgotPassword"])) {
 
@@ -42,4 +50,3 @@ if (isset($_POST["ForgotPassword"])) {
 }
 
 ?>
-
