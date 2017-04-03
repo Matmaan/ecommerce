@@ -33,3 +33,10 @@ function getProducts($nbProducts, $category = null) {
 
     return $query->fetchAll(PDO::FETCH_OBJ);
 }
+
+function getProduct($id) {
+    global $bdd;
+    $query = $bdd->query("SELECT * FROM product WHERE id_product = $id");
+
+    return $query->fetch(PDO::FETCH_OBJ);
+}
