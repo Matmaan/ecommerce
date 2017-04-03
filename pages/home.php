@@ -46,5 +46,24 @@
             <?php endforeach; ?>
         </span>
     <?php endif; ?>
-    
+
 </div>
+<nav class="navigation post-navigation meta-box" role="navigation">
+	<nav class="text-center">
+        <ul class="pagination pagination-centered">
+            <li><span class="pages">Page 1 of 128</span></li>
+            <li></li>
+            <li class="active"><span>1</span></li>
+            <li><a class="page larger" href="http://www.hearthstonetopdecks.com/page/2/">2</a></li>
+            <li><a class="page larger" href="http://www.hearthstonetopdecks.com/page/3/">3</a></li>
+            <li><a class="page larger" href="http://www.hearthstonetopdecks.com/page/4/">4</a></li>
+            <li><a class="page larger" href="http://www.hearthstonetopdecks.com/page/5/">5</a></li>
+            <li><span class="extend">...</span></li>
+            <li><a class="larger page" href="http://www.hearthstonetopdecks.com/page/10/">10</a></li>
+            <li><a class="larger page" href="http://www.hearthstonetopdecks.com/page/20/">20</a></li>
+            <li><a class="larger page" href="http://www.hearthstonetopdecks.com/page/30/">30</a></li>
+            <li><span class="extend">...</span></li>
+            <li><a class="nextpostslink" rel="next" href="http://www.hearthstonetopdecks.com/page/2/">»</a></li>
+            <li><a class="last" href="http://www.hearthstonetopdecks.com/page/128/">Last »</a></li>
+</ul>
+            </nav>			</nav>
