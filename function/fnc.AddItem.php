@@ -7,8 +7,9 @@ if (!empty($_POST)) {
     $description = $_POST['description'];
     $image = $_POST['image'];
     $price = $_POST['price'];
+    $quantity = $_POST['quantity'];
 
-    $last_id = setProduct($name, $category, $description, $image, $price);
+    $last_id = setProduct($name, $category, $description, $image, $price, $quantity);
     //print_r($last_id);
 
     // renvoie vers la fiche client (lui affiche ses données personnelles)

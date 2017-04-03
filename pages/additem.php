@@ -40,6 +40,10 @@ include_once 'function/fnc.AddItem.php';
                     <label for="price" class="control-label">Fixez un prix de vente pour votre rêve</label>
                     <input type="text" class="form-control" id="price" name="price">
                 </div>
+                <div class="form-group">
+                    <label for="quantity" class="control-label">Quantité disponible</label>
+                    <input type="text" class="form-control" id="quantity" name="quantity">
+                </div>
 
                 <button type="submit" class="btn btn-info">Valider</button>
             </form>
