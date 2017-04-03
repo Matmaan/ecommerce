@@ -8,5 +8,5 @@ include_once 'function/fnc.ToConnect.php';
 	<input type="password" name="pswd" class="form-control">
 	<br>
 	<button type="submit" class="btn btn-default btn-primary">Connexion</button>
-	<button type="button" class="btn btn-default btn-primary"><a href="">Mot de passe oublié ?</a></button>
+	<button type="button" class="btn btn-default btn-primary"><a href="">Mot de passe oublié ?</a></button>   
 </form>
