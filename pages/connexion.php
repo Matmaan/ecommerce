@@ -10,7 +10,3 @@ include_once 'function/fnc.ToConnect.php';
 	<button type="submit" class="btn btn-default btn-primary">Connexion</button>
 	<button type="button" class="btn btn-default btn-primary"><a href="forgot_password.php">Mot de passe oublié ?</a></button>
 </form>
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/philippe
