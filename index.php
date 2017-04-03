@@ -16,3 +16,18 @@ if (isset($_GET["page"])) {
 }
 
 require_once 'pages/footer.php';
+
+
+
+// Test faker
+require_once '/vendor/fzaninotto/faker/src/autoload.php';
+
+$faker = Faker\Factory::create();
+
+echo "=====================<br> Test faker<br>";
+echo $faker->name;
+echo "<br>";
+echo $faker->address;
+echo "<br>";
+echo $faker->text;
+var_dump($_SESSION);
