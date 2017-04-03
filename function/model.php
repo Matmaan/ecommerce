@@ -47,3 +47,21 @@ function getProduct($id) {
 
     return $query->fetch(PDO::FETCH_OBJ);
 }
+
+function setProduct($name, $category, $description, $image, $price) {
+    // On définit $bdd comme etant une variable globale
+    global $bdd;
+    // Preparation de la requete
+    $query = $bdd->prepare("INSERT INTO `product`(`id_category`, `name`, `description`, `image`, `price`, `quantity`) VALUES (:id_category, :name, :description, :image, :price, 50)");
+    // BindValue
+    $query->bindParam(':id_category', $category, PDO::PARAM_INT);
+    $query->bindParam(':name', $name, PDO::PARAM_STR);
+    $query->bindParam(':description', $description, PDO::PARAM_STR);
+    $query->bindParam(':image', $image, PDO::PARAM_STR);
+    $query->bindParam(':price', $price, PDO::PARAM_INT);
+
+    // Executiuon de la requete
+    $query->execute();
+
+    return $bdd->lastInsertId();
+}
