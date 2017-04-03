@@ -1,13 +1,15 @@
 <?php
+// include 'header.php';
 include_once 'function/fnc.AddItem.php';
+
  ?><!DOCTYPE html>
 <html>
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
-        <link rel="stylesheet" type="text/css" href="css/font-awesome.css">
+        <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../css/font-awesome.css">
         <!-- <link rel="stylesheet" type="text/css" href="css/main.css"> -->
         <title></title>
     </head>
@@ -37,7 +39,7 @@ include_once 'function/fnc.AddItem.php';
 
                 <div class="form-group">
                     <label for="image" class="control-label">Dessinez-nous votre rêve</label>
-                    <input type="file" class="form-control" id="image" name="image">
+                    <input type="text" class="form-control" id="image" name="image">
                 </div>
 
                 <div class="form-group">
@@ -49,8 +51,8 @@ include_once 'function/fnc.AddItem.php';
             </form>
         </div>
 
-        <script src="js/jquery-3.1.1.min.js"></script>
-        <script src="js/vendor/bootstrap.js"></script>
-        <script src="app/app.js"></script>
+        <script src="../js/jquery-3.1.1.min.js"></script>
+        <script src="../js/vendor/bootstrap.js"></script>
+        <script src="../app/app.js"></script>
     </body>
 </html>

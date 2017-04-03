@@ -1,5 +1,8 @@
 {
 <<<<<<< HEAD
+    "name": "webforce/ecommerce",
+=======
+<<<<<<< HEAD
     "name": "webforce3/ecommerce",
     "authors": [
         {
@@ -15,6 +18,7 @@
 >>>>>>> refs/remotes/origin/master
         }
     ],
+>>>>>>> refs/remotes/origin/master
     "require": {
         "fzaninotto/faker": "^1.6"
     }
