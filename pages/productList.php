@@ -1,6 +1,7 @@
 <?php require_once '../function/model.php'; ?>
 <?php require_once '../config.php'; ?>
-<?php $_SESSION["nbProducts"] = $_GET["nbProducts"]; ?>
+<?php session_name("Ecommerce");
+session_start(); ?>
 
 <?php foreach (getProducts(isset($_GET["nbProducts"]) ?$_GET["nbProducts"]: 12 ) as $article): ?>
     <div class="col-md-3 well product" style="height: 300px">
@@ -11,3 +12,5 @@
         <h4><?php echo $article->price; ?> €</h4>
     </div>
 <?php endforeach; ?>
+
+<?php $_SESSION["nbProducts"] = $_GET["nbProducts"]; ?>
