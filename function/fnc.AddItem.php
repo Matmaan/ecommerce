@@ -26,22 +26,30 @@ if (!empty($_POST)) {
     $name = $_POST['name'];
     $category = $_POST['category'];
     $description = $_POST['description'];
+    $image = $_POST['image'];
     $price = $_POST['price'];
 
     // On définit $bdd comme etant une variable globale
     global $bdd;
     // Preparation de la requete
-    $query = $bdd->prepare("INSERT INTO `product`(`id_category`, `name`, `description`, `price`) VALUES (:id_category, :name, :description, :price)");
+    $query = $bdd->prepare("INSERT INTO `product`(`id_category`, `name`, `description`, `image`, `price`) VALUES (:id_category, :name, :description, :image, :price)");
     // BindValue
     $query->bindParam(':id_category', $category, PDO::PARAM_INT);
     $query->bindParam(':name', $name, PDO::PARAM_STR);
     $query->bindParam(':description', $description, PDO::PARAM_STR);
+    $query->bindParam(':image', $image, PDO::PARAM_STR);
     $query->bindParam(':price', $price, PDO::PARAM_INT);
 
     // Executiuon de la requete
     $query->execute();
-    var_dump($query->execute());
 
-    // print_r($_POST);
+    $last_id = $bdd->lastInsertId();
+    //print_r($last_id);
+
+    // renvoie vers la fiche client (lui affiche ses données personnelles)
+    // redirection information
+    header("location: index.php?page=product&article=".$last_id);
+    exit;
+
 
 }
