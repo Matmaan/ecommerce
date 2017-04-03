@@ -1,4 +1,4 @@
-<?php
+
 // Was the form submitted?
 if (isset($_POST["ResetPasswordForm"]))
 {
