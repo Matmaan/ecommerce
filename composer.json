@@ -1,0 +1,13 @@
+{
+    "name": "webforce/ecommerce",
+    "type": "project",
+    "authors": [
+        {
+            "name": "PhilippeGruet",
+            "email": "philippe.gruet@outlook.fr"
+        }
+    ],
+    "require": {
+        "fzaninotto/faker": "^1.6"
+    }
+}
