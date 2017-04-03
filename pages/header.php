@@ -29,7 +29,6 @@
                   <ul class="nav navbar-nav navbar-right">
                     <li><a href="?page=inscription">Inscription</a></li>
                     <li><a href="?page=connexion">Connexion</a></li>
-
                   </ul>
 
                   <form  action="?page=99" class="navbar-form navbar-right">

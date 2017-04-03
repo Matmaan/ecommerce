@@ -26,7 +26,7 @@ if (!empty($_POST)) {
 	if (!empty($user)) {
 		if (password_verify($password, $user->password)) {
     		$_SESSION = $user;
-    	}
+        	}
 	} else {
     		echo "<li>Pseudo ou mot de passe incorrect.</li>";
     	} 
