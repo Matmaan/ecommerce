@@ -12,6 +12,7 @@
             <form class="pull-right">
                 Nombre de produits par pages :
                 <select name="" id="nbProducts">
+                    <option value="" selected disabled></option>
                     <option value="12">12</option>
                     <option value="6">6</option>
                     <option value="4">4</option>
@@ -20,7 +21,7 @@
         </div>
     </div>
     <span id="productList">
-        <?php foreach (getProducts(isset($_SESSION["nbProducts"]) ?: 12 ) as $article): ?>
+        <?php foreach (getProducts(isset($_SESSION["nbProducts"]) ?$_SESSION["nbProducts"]: 12 ) as $article): ?>
             <div class="col-md-3 well product" style="height: 300px">
                 <a href="?page=product&article=<?php echo $article->id_product; ?>">
                     <img src="<?php echo $article->image?>" class="img-responsive img-thumbnail">
