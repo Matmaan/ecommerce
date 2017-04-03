@@ -1,7 +1,7 @@
 <?php
 include_once 'function/fnc.ToConnect.php';
 ?>
-<form method="POST">
+<form class="to_connect" method="POST">
 	<label for="pseudo">Pseudonyme :</label>
 	<input type="text" name="pseudo" class="form-control">
 	<label for="pswd">Mot de passe :</label>

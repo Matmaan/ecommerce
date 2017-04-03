@@ -3,10 +3,10 @@
 include_once 'function/fnc.AddItem.php';
  ?>
         <div class="container text-center">
-            <p>Racontez-nous votre rêve...</p>
+            <p class="sentence">Racontez-nous votre rêve...</p>
         </div>
         <div class="container">
-            <form method="POST">
+            <form class="add_article" method="POST">
                 <div class="form-group">
                     <label for="name" class="control-label">Nom du rêve</label>
                     <input type="text" name="name" value="" class="form-control">

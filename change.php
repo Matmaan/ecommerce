@@ -1,4 +1,19 @@
 <?php
+<<<<<<< HEAD
+$username = "root";
+$password = "";
+$host = "localhost";
+$dbname = "ecommerce";
+
+try {
+$conn = new PDO("mysql:host={$host};dbname={$dbname};charset=utf8", $username, $password);
+} catch(PDOException $ex)
+    {
+
+        $msg = "Failed to connect to the database";
+    }
+
+=======
     $username = "root";
     $password = "";
     $host = "localhost";
@@ -8,6 +23,7 @@ $conn = new PDO("mysql:host={$host};dbname={$dbname};charset=utf8", $username, $
 }catch(PDOException $ex) {
     $msg = "La connexion à la base de données a échouée";
 }
+>>>>>>> refs/remotes/origin/master
 // Was the form submitted?
 if (isset($_POST["ForgotPassword"])) {
 
@@ -36,13 +52,13 @@ if (isset($_POST["ForgotPassword"])) {
 		$password = hash('sha512', $salt.$userExists["email"]);
 
 		// Create a url which we will direct them to reset their password
-		$pwrurl = "www.localhost/git/ecommerce.com/reset_password.php?q=".$password;
+		$pwrurl = "www.monsite.com/reset_password.php?q=".$password;
 
 		// Mail them their key
-		$mailbody = "Veuillez cliquez sur le lien suivant" . $pwrurl . "afin de réinitialiser votre mot de passe.";
+		$mailbody = "Dear user,\n\nIf this e-mail does not apply to you please ignore it. It appears that you have requested a password reset at our website www.yoursitehere.com\n\nTo reset your password, please click the link below. If you cannot click it, please paste it into your web browser's address bar.\n\n" . $pwrurl . "\n\nThanks,\nThe Administration";
 		//mail($userExists["email"], "www.yoursitehere.com - Password Reset", $mailbody);
 		echo $mailbody;
-		echo "Un code de réinitialisation de mot de passe a été envoyé à votre adresse email";
+		echo "Un code de réinitialisation de mot de passe a été envoyé";
 
 	}
 	else
