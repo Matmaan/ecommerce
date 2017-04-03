@@ -18,9 +18,18 @@ function setUser($pseudo, $email, $password) {
     $query->bindParam(':password', $password, PDO::PARAM_STR);
 
     // Executiuon de la requete
-    $query->execute();
+    if ($query->execute()) {
+        // Récupération du dernier enregistrement (ID)
+        return $bdd->lastInsertId();
+    }
 
-    // Récupération du dernier enregistrement (ID)
-    return $bdd->lastInsertId();
+    return false;
 }
 
+function getProducts($nbProducts, $category = null) {
+    global $bdd;
+
+    $query = $bdd->query("SELECT * FROM product ORDER BY id_product DESC LIMIT $nbProducts");
+
+    return $query->fetchAll(PDO::FETCH_OBJ);
+}
