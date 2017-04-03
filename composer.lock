@@ -5,9 +5,13 @@
         "This file is @generated automatically"
     ],
 <<<<<<< HEAD
+    "content-hash": "bc09245d0bdb9bc7334536ec8772c87d",
+=======
+<<<<<<< HEAD
     "content-hash": "3a183d748e6b5c9957fe669dd8c4e23e",
 =======
     "content-hash": "bc09245d0bdb9bc7334536ec8772c87d",
+>>>>>>> refs/remotes/origin/master
 >>>>>>> refs/remotes/origin/master
     "packages": [
         {

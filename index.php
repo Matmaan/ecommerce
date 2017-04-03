@@ -1,5 +1,5 @@
 <?php
-
+session_name("Ecommerce");
 session_start();
 
 require_once 'config.php';
@@ -20,14 +20,17 @@ require_once 'pages/footer.php';
 
 
 // Test faker
-require_once '/vendor/fzaninotto/faker/src/autoload.php';
-
-$faker = Faker\Factory::create();
-
-echo "=====================<br> Test faker<br>";
-echo $faker->name;
-echo "<br>";
-echo $faker->address;
-echo "<br>";
-echo $faker->text;
-var_dump($_SESSION);
+// require_once '/vendor/fzaninotto/faker/src/autoload.php';
+//
+// $faker = Faker\Factory::create();
+//
+// echo "=====================<br> Test faker<br>";
+// echo $faker->name;
+// echo "<br>";
+// echo $faker->address;
+// echo "<br>";
+// echo $faker->text;
+// echo "<br>";
+// echo "<img src='$faker->imageUrl()'>";
+// echo "<br>";
+// var_dump($_SESSION);
