@@ -16,6 +16,7 @@ include_once 'function/fnc.AddItem.php';
                     <select name="category" id="category">
                         <?php foreach (getCategories() as $category) {
                             echo "<option value=".$category->id_category.">".$category->category."</option>";
+
                         } ?>
                     </select>
                 </div>
