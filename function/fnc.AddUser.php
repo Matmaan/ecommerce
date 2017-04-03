@@ -54,7 +54,7 @@ if (!empty($_POST)) {
                 "message" => "Votre pseudo doit contenir au moins 4 caractères."
             ));
         }
-        
+
         // Cryptage mot de passe
         // Pseudo avec minimum 4caractères et n'existe pas en bdd
 
@@ -91,11 +91,5 @@ if (!empty($_POST)) {
         }
         echo "</ul>";
     }
-<<<<<<< HEAD
 
-
-
-
-=======
 }
->>>>>>> refs/remotes/origin/master

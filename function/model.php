@@ -2,7 +2,7 @@
 
 function getCategories() {
     global $bdd;
-    $query = $bdd->query("SELECT category FROM category");
+    $query = $bdd->query("SELECT * FROM category");
     return $query->fetchAll(PDO::FETCH_OBJ);
 }
 
@@ -26,10 +26,17 @@ function setUser($pseudo, $email, $password) {
     return false;
 }
 
-function getProducts($nbProducts, $category = null) {
+function getProducts($nbProducts) {
     global $bdd;
 
     $query = $bdd->query("SELECT * FROM product ORDER BY id_product DESC LIMIT $nbProducts");
+
+    return $query->fetchAll(PDO::FETCH_OBJ);
+}
+function getProductsByCategory($nbProducts, $idCategory) {
+    global $bdd;
+
+    $query = $bdd->query("SELECT * FROM product WHERE id_category = $idCategory ORDER BY id_product DESC LIMIT $nbProducts");
 
     return $query->fetchAll(PDO::FETCH_OBJ);
 }
