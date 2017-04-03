@@ -3,9 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Client :  127.0.0.1
-
--- Généré le :  Ven 31 Mars 2017 à 16:36
-
+-- Généré le :  Lun 03 Avril 2017 à 11:33
 -- Version du serveur :  10.1.19-MariaDB
 -- Version de PHP :  5.6.28
 
@@ -102,7 +100,8 @@ INSERT INTO `users` (`id_user`, `email`, `password`, `role`, `login`, `registere
 (9, 'webforces', 'webforce', 'user', '', '2017-03-31 14:40:09'),
 (10, 'webforcezgr', 'webforce', 'user', '', '2017-03-31 14:41:46'),
 (24, 'test@123.com', '123', 'user', 'test', '2017-03-31 14:48:03'),
-(27, '', '', 'user', '', '2017-03-31 15:14:02');
+(28, 'user@domain.com', '$2y$10$oi.EVCZ5VSa/kytrscXS/Om68V31UGAqy9WdJ32SxhIns/PzldDEe', 'user', 'azert12#AA', '2017-03-31 17:25:08'),
+(30, 'user@domain.com1', '$2y$10$CtIVpjQ63cUkGwOj6VTOX.mNXY2ngr3KBPAjWG7jgrWgV..zjJAPy', 'user', 'aaaaz', '2017-04-03 11:30:04');
 
 --
 -- Index pour les tables exportées
@@ -126,8 +125,7 @@ ALTER TABLE `product`
 --
 ALTER TABLE `users`
   ADD PRIMARY KEY (`id_user`),
-  ADD UNIQUE KEY `email` (`email`),
-  ADD UNIQUE KEY `login` (`login`);
+  ADD UNIQUE KEY `email` (`email`);
 
 --
 -- AUTO_INCREMENT pour les tables exportées
@@ -147,7 +145,7 @@ ALTER TABLE `product`
 -- AUTO_INCREMENT pour la table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
+  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
 --
 -- Contraintes pour les tables exportées
 --
