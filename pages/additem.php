@@ -39,7 +39,7 @@ include_once 'function/fnc.AddItem.php';
 
                 <div class="form-group">
                     <label for="image" class="control-label">Dessinez-nous votre rêve</label>
-                    <input type="file" class="form-control" id="image" name="image">
+                    <input type="text" class="form-control" id="image" name="image">
                 </div>
 
                 <div class="form-group">
