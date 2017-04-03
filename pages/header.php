@@ -28,7 +28,7 @@
 
                   <ul class="nav navbar-nav navbar-right">
                     <li><a href="?page=inscription">Inscription</a></li>
-                    <li><a href="?page=31">Connexion</a></li>
+                    <li><a href="?page=connexion">Connexion</a></li>
 
                   </ul>
 
