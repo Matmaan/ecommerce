@@ -91,11 +91,6 @@ if (!empty($_POST)) {
         }
         echo "</ul>";
     }
-<<<<<<< HEAD
 
-
-
-
-=======
 }
->>>>>>> refs/remotes/origin/master
+
