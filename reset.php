@@ -1,4 +1,19 @@
+<?php
+<<<<<<< HEAD
+$username = "root";
+$password = "";
+$host = "localhost";
+$dbname = "ecommerce";
 
+try {
+$conn = new PDO("mysql:host={$host};dbname={$dbname};charset=utf8", $username, $password);
+} catch(PDOException $ex)
+    {
+
+        $msg = "Failed to connect to the database";
+    }
+=======
+>>>>>>> refs/remotes/origin/master
 // Was the form submitted?
 if (isset($_POST["ResetPasswordForm"]))
 {
@@ -28,13 +43,13 @@ if (isset($_POST["ResetPasswordForm"]))
 				$query->bindParam(':email', $email);
 				$query->execute();
 				$conn = null;
-			echo "Votre mot de passe a bien été réinitialisé.";
+			echo "Votre mot de passe a bien été changé.";
 		}
 		else
 			echo "Le mot de passe ne correspond pas.";
 	}
 	else
-		echo "Votre code de réinitialition n'est pas valide.";
+		echo "Code invalide.";
 }
 
 ?>

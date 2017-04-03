@@ -28,6 +28,7 @@ function setUser($pseudo, $email, $password) {
 
 
 function countProducts(){
+
     global $bdd;
     $query = $bdd->query("SELECT COUNT(*) FROM product");
 
