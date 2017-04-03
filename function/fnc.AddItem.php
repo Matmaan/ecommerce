@@ -41,5 +41,7 @@ if (!empty($_POST)) {
     // Executiuon de la requete
     $query->execute();
     var_dump($query->execute());
-    print_r($_POST);
+
+    // print_r($_POST);
+
 }
