@@ -20,6 +20,7 @@ if (!empty($_POST)) {
 
 
 
+
         // Filter var email
         if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
         array_push($error, array(
@@ -74,6 +75,5 @@ if (!empty($_POST)) {
         }
         echo "</ul>";
     }
-    // print_r($error);
 }
 
