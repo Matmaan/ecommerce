@@ -1,0 +1,6 @@
+{
+    "name": "webforce/ecommerce",
+    "require": {
+        "fzaninotto/faker": "^1.6"
+    }
+}

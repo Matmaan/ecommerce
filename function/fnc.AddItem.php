@@ -40,8 +40,14 @@ if (!empty($_POST)) {
 
     // Executiuon de la requete
     $query->execute();
-    var_dump($query->execute());
 
-    // print_r($_POST);
+    $last_id = $bdd->lastInsertId();
+    print_r($last_id);
+
+    // renvoie vers la fiche client (lui affiche ses données personnelles)
+    // redirection information
+    header("location: info.php?page=20&article=".$last_id);
+    exit;
+
 
 }
