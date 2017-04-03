@@ -1,24 +1,14 @@
 {
-<<<<<<< HEAD
-    "name": "webforce/ecommerce",
-=======
-<<<<<<< HEAD
-    "name": "webforce3/ecommerce",
-    "authors": [
-        {
-            "name": "Mathieu Briatte",
-            "email": "briattemathieu@yahoo.fr"
-=======
     "name": "webforce/ecommerce",
     "type": "project",
     "authors": [
         {
             "name": "PhilippeGruet",
             "email": "philippe.gruet@outlook.fr"
->>>>>>> refs/remotes/origin/master
+
+
         }
     ],
->>>>>>> refs/remotes/origin/master
     "require": {
         "fzaninotto/faker": "^1.6"
     }
