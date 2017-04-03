@@ -23,11 +23,14 @@ if (!empty($_POST)) {
 
 	$user = getUserByPseudo($pseudo);
 
-	print_r($user);
+	if (!empty($user)) {
+		if (password_verify($password, $user->password)) {
+    		$_SESSION['user'] = $user;
+        	}
+	} else {
+    		echo "<li>Pseudo ou mot de passe incorrect.</li>";
+    	} 
 
-    if (password_verify($password, $user->password)) {
-    	echo "Yolo";
-    }
 
 }
 
