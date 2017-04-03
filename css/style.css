@@ -1,0 +1,6 @@
+.minia {
+    filter: grayscale(35%);
+}
+.minia:hover {
+    filter: grayscale(0%);
+}
