@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Client :  127.0.0.1
--- Généré le :  Lun 03 Avril 2017 à 11:33
+-- Généré le :  Lun 03 Avril 2017 à 13:57
 -- Version du serveur :  10.1.19-MariaDB
 -- Version de PHP :  5.6.28
 
@@ -92,14 +92,8 @@ CREATE TABLE `users` (
 
 INSERT INTO `users` (`id_user`, `email`, `password`, `role`, `login`, `registered_at`) VALUES
 (1, 'toto@ok.fr', '123', 'user', 'toto', '2017-03-31 14:28:08'),
-(2, 'webforce', 'webforce', 'user', 'toto', '2017-03-31 14:30:05'),
 (5, 'webforce@123.fr', 'webforce', 'user', 'a', '2017-03-31 14:36:19'),
-(6, 'webforc', 'webforce', 'user', '', '2017-03-31 14:36:55'),
-(7, 'webforcea', 'webforce', 'user', '', '2017-03-31 14:38:19'),
-(8, 'webforceaa', 'webforce', 'user', '', '2017-03-31 14:39:21'),
-(9, 'webforces', 'webforce', 'user', '', '2017-03-31 14:40:09'),
-(10, 'webforcezgr', 'webforce', 'user', '', '2017-03-31 14:41:46'),
-(24, 'test@123.com', '123', 'user', 'test', '2017-03-31 14:48:03'),
+(24, 'test@123.com', '341294370b8d12fe09d9e05b6a19b6ede43798d5d1f738c0842bbfa41837fa2bba44ed9da2d8b0abdedf431172d4350eef566af63b7eac53f7239436b4377df5', 'user', 'test', '2017-03-31 14:48:03'),
 (28, 'user@domain.com', '$2y$10$oi.EVCZ5VSa/kytrscXS/Om68V31UGAqy9WdJ32SxhIns/PzldDEe', 'user', 'azert12#AA', '2017-03-31 17:25:08'),
 (30, 'user@domain.com1', '$2y$10$CtIVpjQ63cUkGwOj6VTOX.mNXY2ngr3KBPAjWG7jgrWgV..zjJAPy', 'user', 'aaaaz', '2017-04-03 11:30:04');
 
@@ -125,7 +119,8 @@ ALTER TABLE `product`
 --
 ALTER TABLE `users`
   ADD PRIMARY KEY (`id_user`),
-  ADD UNIQUE KEY `email` (`email`);
+  ADD UNIQUE KEY `email` (`email`),
+  ADD UNIQUE KEY `login` (`login`);
 
 --
 -- AUTO_INCREMENT pour les tables exportées
