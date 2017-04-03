@@ -12,9 +12,11 @@
 }
 
 body{
-    background-image:url("../img/dream-filter-infrared-surreal.jpg");
+    background-image:url("../img/pexels-photo-132800.jpeg");
     background-attachment: fixed;
-    width: auto;
+    background-repeat: no-repeat;
+    background-size: 100%;
+
 }
 h1, h2{
     color:  #000080;
@@ -75,18 +77,25 @@ form.pull-right {
     font-family: 'Montserrat', sans-serif;
 }
 
-form.to_connect, .to_inscription{
+form.to_connect, .to_inscription {
     color: #000080;
     font-size: 14px;
     font-family: 'Montserrat', sans-serif;
-    height: 250px;
+    height: 300px;
     padding:10px;
 }
 
-form.to_connect label{
+form.to_connect, .to_inscription, label{
     margin:10px;
 }
 
-form.to_connect button{
-    color: oldlace;
+form.add_article{
+    color: #000080;
+    font-size: 14px;
+    font-family: 'Montserrat', sans-serif;
+}
+.sentence{
+    font-size: 25px;
+    font-family: 'Indie Flower', cursive;
+    color: #000080;
 }
