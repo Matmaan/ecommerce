@@ -26,6 +26,7 @@ function setUser($pseudo, $email, $password) {
     return false;
 }
 
+
 function getProducts($nbProducts) {
     global $bdd;
 
