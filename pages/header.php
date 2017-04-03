@@ -22,19 +22,14 @@
                 <div>
                   <ul class="nav navbar-nav">
                   <?php foreach(getCategories() as $category): ?>
-                      <li><a href="#"><?php echo $category->category; ?></a></li>
+                      <li><a href="?category=<?php echo $category->id_category; ?>"><?php echo $category->category; ?></a></li>
                   <?php endforeach; ?>
                   </ul>
 
                   <ul class="nav navbar-nav navbar-right">
                     <li><a href="?page=inscription">Inscription</a></li>
-<<<<<<< HEAD
                     <li><a href="?page=31">Connexion</a></li>
                     <li><a href="?page=additem">Ajouter un article</a></li>
-=======
-                    <li><a href="?page=connexion">Connexion</a></li>
->>>>>>> refs/remotes/origin/master
-
                   </ul>
 
                   <form  action="?page=99" class="navbar-form navbar-right">

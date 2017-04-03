@@ -1,6 +1,10 @@
 <?php
 
+<<<<<<< HEAD
+    require_once('../config.php');
+=======
     //require_once('../config.php');
+>>>>>>> refs/remotes/origin/master
     //require_once('functions.php');
 
     if(isset($_POST['recup_submit'], $_POST['recup_email'])) {
@@ -12,6 +16,15 @@
                 $email_exist->execute(array($recup_email));
                 $email_exist_count = $email_exist->rowCount();
 
+<<<<<<< HEAD
+                if ($email_exist_count == 1) {
+                    $login = $email_exist->fetch();
+                    $login = $login['login'];
+
+                    $_SESSION['recup_email'] = $recup_email;
+                    $recup_code = "";
+                    for ($i=0; $i <= 8  ; $i++) {
+=======
                 if ($email_exist == 1) {
                     $login = $email_exist->fetch();
                     $login = $login['login'];
@@ -19,6 +32,7 @@
                     $_SESSION['recup_email'] = $recup_email;
                     $recup_code = "";
                     for ($i=0; $i < 8  ; $i++) {
+>>>>>>> refs/remotes/origin/master
                         $recup_code .= mt_rand(0,9);
                 }
 

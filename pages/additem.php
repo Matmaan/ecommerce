@@ -1,19 +1,7 @@
 <?php
 // include 'header.php';
 include_once 'function/fnc.AddItem.php';
-
- ?><!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
-        <link rel="stylesheet" type="text/css" href="../css/font-awesome.css">
-        <!-- <link rel="stylesheet" type="text/css" href="css/main.css"> -->
-        <title></title>
-    </head>
-    <body>
+ ?>
         <div class="container text-center">
             <p>Racontez-nous votre rêve...</p>
         </div>
@@ -25,9 +13,15 @@ include_once 'function/fnc.AddItem.php';
                 </div>
                 <div class="form-group">
                     <label for="category" class="control-label">A quelle catégorie appartient votre rêve ?</label>
+<<<<<<< HEAD
                     <select name="category" id="category" class="form-control">
                         <?php foreach (selectcategory() as $category) {
                             echo "<option value=".$category['id_category'].">".$category['category']."</option>";
+=======
+                    <select name="category" id="category">
+                        <?php foreach (getCategories() as $category) {
+                            echo "<option value=".$category->id_category.">".$category->category."</option>";
+>>>>>>> refs/remotes/origin/master
                         } ?>
                     </select>
                 </div>
@@ -50,9 +44,3 @@ include_once 'function/fnc.AddItem.php';
                 <button type="submit" class="btn btn-info">Valider</button>
             </form>
         </div>
-
-        <script src="../js/jquery-3.1.1.min.js"></script>
-        <script src="../js/vendor/bootstrap.js"></script>
-        <script src="../app/app.js"></script>
-    </body>
-</html>
