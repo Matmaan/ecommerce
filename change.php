@@ -1,4 +1,5 @@
 <?php
+
 // Was the form submitted?
 if (isset($_POST["ForgotPassword"])) {
 
@@ -39,4 +40,6 @@ if (isset($_POST["ForgotPassword"])) {
 	else
 		echo "Cet email ne correspond pas à une adresse connue dans la base de donnée";
 }
+
 ?>
+
