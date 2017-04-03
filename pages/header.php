@@ -27,8 +27,12 @@
                   </ul>
 
                   <ul class="nav navbar-nav navbar-right">
-                    <li><a href="?page=inscription">Inscription</a></li>
-                    <li><a href="?page=connexion">Connexion</a></li>
+                    <?php 
+                      if (empty($_SESSION['user']->login)) {
+                          echo ('<li><a href="?page=inscription">Inscription</a></li>');
+                          echo ('<li><a href="?page=connexion">Connexion</a></li>');
+                      }
+                    ?>
                     <li><a href="?page=additem">Ajouter un article</a></li>
                     <li><a href="?page=contact-profile">
                     <?php 
