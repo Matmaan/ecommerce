@@ -1,6 +1,7 @@
 
 <div class="list-group">
-  <a href="?page=update" class="list-group-item">Mettre à jour le profil</a>
+  <a href="?page=UpdateUser" class="list-group-item">Mettre à jour le profil</a>
+
   <a href="?page=home" class="list-group-item">Tous les rêves</a>
   <?php
     if ($_SESSION['user']->role !== 'user') {
