@@ -1,21 +1,11 @@
 <?php
-    $username = "root"; 
-    $password = ""; 
-    $host = "localhost"; 
-    $dbname = "ecommerce"; 
-try {
-$conn = new PDO("mysql:host={$host};dbname={$dbname};charset=utf8", $username, $password);
-}catch(PDOException $ex) { 
-    $msg = "La connexion à la base de données a échouée"; 
-} 
-
 // Was the form submitted?
 if (isset($_POST["ForgotPassword"])) {
-	
+
 	// Harvest submitted e-mail address
 	if (filter_var($_POST["email"], FILTER_VALIDATE_EMAIL)) {
 		$email = $_POST["email"];
-		
+
 	}else{
 		echo "Email invalide";
 		exit;
@@ -27,7 +17,7 @@ if (isset($_POST["ForgotPassword"])) {
 	$query->execute();
 	$userExists = $query->fetch(PDO::FETCH_ASSOC);
 	$conn = null;
-	
+
 	if ($userExists["email"])
 	{
 		// Create a unique salt. This will never leave PHP unencrypted.
@@ -38,13 +28,13 @@ if (isset($_POST["ForgotPassword"])) {
 
 		// Create a url which we will direct them to reset their password
 		$pwrurl = "www.localhost/git/ecommerce.com/reset_password.php?q=".$password;
-		
+
 		// Mail them their key
 		$mailbody = "Veuillez cliquez sur le lien suivant" . $pwrurl . "afin de réinitialiser votre mot de passe.";
 		//mail($userExists["email"], "www.yoursitehere.com - Password Reset", $mailbody);
 		echo $mailbody;
 		echo "Un code de réinitialisation de mot de passe a été envoyé à votre adresse email";
-		
+
 	}
 	else
 		echo "Cet email ne correspond pas à une adresse connue dans la base de donnée";
