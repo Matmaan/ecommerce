@@ -6,6 +6,7 @@ function getCategories() {
     return $query->fetchAll(PDO::FETCH_OBJ);
 }
 
+
 function setUser($pseudo, $email, $password) {
     global $bdd;
 
@@ -22,24 +23,39 @@ function setUser($pseudo, $email, $password) {
         // Récupération du dernier enregistrement (ID)
         return $bdd->lastInsertId();
     }
-
     return false;
 }
 
-function getProducts($nbProducts) {
-    global $bdd;
 
-    $query = $bdd->query("SELECT * FROM product ORDER BY id_product DESC LIMIT $nbProducts");
+function countProducts(){
+    global $bdd;
+    $query = $bdd->query("SELECT COUNT(*) FROM product");
+
+    return $query->fetch();
+}
+function countProductsByCategory($id_cat){
+    global $bdd;
+    $query = $bdd->query("SELECT COUNT(*) FROM product WHERE id_category = $id_cat");
+
+    return $query->fetch();
+}
+
+
+function getProducts($nbProducts, $offset = 0) {
+    global $bdd;
+    $query = $bdd->query("SELECT * FROM product ORDER BY id_product DESC LIMIT $nbProducts OFFSET $offset");
 
     return $query->fetchAll(PDO::FETCH_OBJ);
 }
-function getProductsByCategory($nbProducts, $idCategory) {
-    global $bdd;
 
-    $query = $bdd->query("SELECT * FROM product WHERE id_category = $idCategory ORDER BY id_product DESC LIMIT $nbProducts");
+
+function getProductsByCategory($nbProducts, $idCategory, $offset = 0) {
+    global $bdd;
+    $query = $bdd->query("SELECT * FROM product WHERE id_category = $idCategory ORDER BY id_product DESC LIMIT $nbProducts OFFSET $offset");
 
     return $query->fetchAll(PDO::FETCH_OBJ);
 }
+
 
 function getProduct($id) {
     global $bdd;
@@ -48,11 +64,17 @@ function getProduct($id) {
     return $query->fetch(PDO::FETCH_OBJ);
 }
 
+
 function setProduct($name, $category, $description, $image, $price, $quantity) {
     // On définit $bdd comme etant une variable globale
     global $bdd;
     // Preparation de la requete
-    $query = $bdd->prepare("INSERT INTO `product`(`id_category`, `name`, `description`, `image`, `price`, `quantity`) VALUES (:id_category, :name, :description, :image, :price, :quantity)");
+    $query = $bdd->prepare("INSERT INTO `product`(
+        `id_category`, `name`, `description`, `image`, `price`, `quantity`
+    ) VALUES (
+        :id_category, :name, :description, :image, :price, :quantity
+    )");
+
     // BindValue
     $query->bindParam(':id_category', $category, PDO::PARAM_INT);
     $query->bindParam(':name', $name, PDO::PARAM_STR);

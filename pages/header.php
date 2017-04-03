@@ -22,7 +22,7 @@
                 <div>
                   <ul class="nav navbar-nav">
                   <?php foreach(getCategories() as $category): ?>
-                      <li><a href="?category=<?php echo $category->id_category; ?>"><?php echo $category->category; ?></a></li>
+                      <li><a href="?page=home&category=<?php echo $category->id_category; ?>"><?php echo $category->category; ?></a></li>
                   <?php endforeach; ?>
                   </ul>
 
