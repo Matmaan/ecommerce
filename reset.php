@@ -1,19 +1,4 @@
-<?php
 
-// Connect to MySQL
-    $username = "root"; 
-    $password = ""; 
-    $host = "localhost"; 
-    $dbname = "ecommerce"; 
-try {
-$conn = new PDO("mysql:host={$host};dbname={$dbname};charset=utf8", $username, $password);
-//$conn = new PDO('mysql:host=localhost;dbname=test', 'root', '');
-}
-catch(PDOException $ex) 
-    { 
-        $msg = "La connexion a échouée"; 
-    } 
-    
 // Was the form submitted?
 if (isset($_POST["ResetPasswordForm"]))
 {
