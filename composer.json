@@ -1,0 +1,12 @@
+{
+    "name": "webforce3/ecommerce",
+    "authors": [
+        {
+            "name": "Mathieu Briatte",
+            "email": "briattemathieu@yahoo.fr"
+        }
+    ],
+    "require": {
+        "fzaninotto/faker": "^1.6"
+    }
+}
