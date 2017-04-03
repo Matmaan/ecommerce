@@ -3,7 +3,7 @@ include_once 'function/fnc.AddUser.php';
 ?>
 
 <main>
-	<form method="POST">
+	<form class="to_inscription" method="POST">
 		<label for="login" class="">Pseudo :</label>
 		<input type="text" name="login" class="form-control">
 		<label for="mail" class="">E-mail :</label>
