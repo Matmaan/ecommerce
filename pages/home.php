@@ -48,22 +48,28 @@
     <?php endif; ?>
 
 </div>
+
 <nav class="navigation post-navigation meta-box" role="navigation">
 	<nav class="text-center">
         <ul class="pagination pagination-centered">
-            <li><span class="pages">Page 1 of 128</span></li>
-            <li></li>
-            <li class="active"><span>1</span></li>
-            <li><a class="page larger" href="http://www.hearthstonetopdecks.com/page/2/">2</a></li>
-            <li><a class="page larger" href="http://www.hearthstonetopdecks.com/page/3/">3</a></li>
-            <li><a class="page larger" href="http://www.hearthstonetopdecks.com/page/4/">4</a></li>
-            <li><a class="page larger" href="http://www.hearthstonetopdecks.com/page/5/">5</a></li>
+            <li><span class="pages">Page 20 of 128</span></li>
+            <li><a class="first" href="">« First</a></li>
+            <li><a class="previouspostslink" rel="prev" href="">«</a></li>
             <li><span class="extend">...</span></li>
-            <li><a class="larger page" href="http://www.hearthstonetopdecks.com/page/10/">10</a></li>
-            <li><a class="larger page" href="http://www.hearthstonetopdecks.com/page/20/">20</a></li>
-            <li><a class="larger page" href="http://www.hearthstonetopdecks.com/page/30/">30</a></li>
+            <li><a class="smaller page" href="">10</a></li>
             <li><span class="extend">...</span></li>
-            <li><a class="nextpostslink" rel="next" href="http://www.hearthstonetopdecks.com/page/2/">»</a></li>
-            <li><a class="last" href="http://www.hearthstonetopdecks.com/page/128/">Last »</a></li>
-</ul>
-            </nav>			</nav>
+            <li><a class="page smaller" href="">18</a></li>
+            <li><a class="page smaller" href="">19</a></li>
+            <li></li><li class="active"><span>20</span></li>
+            <li><a class="page larger" href="">21</a></li>
+            <li><a class="page larger" href="">22</a></li>
+            <li><span class="extend">...</span></li>
+            <li><a class="larger page" href="">30</a></li>
+            <li><a class="larger page" href="">40</a></li>
+            <li><a class="larger page" href="">50</a></li>
+            <li><span class="extend">...</span></li>
+            <li><a class="nextpostslink" rel="next" href="">»</a></li>
+            <li><a class="last" href="">Last »</a></li>
+        </ul>
+    </nav>
+</nav>
