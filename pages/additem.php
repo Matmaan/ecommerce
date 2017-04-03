@@ -25,7 +25,7 @@ include_once 'function/fnc.AddItem.php';
                 </div>
                 <div class="form-group">
                     <label for="category" class="control-label">A quelle catégorie appartient votre rêve ?</label>
-                    <select name="category" id="category">
+                    <select name="category" id="category" class="form-control">
                         <?php foreach (selectcategory() as $category) {
                             echo "<option value=".$category['id_category'].">".$category['category']."</option>";
                         } ?>
