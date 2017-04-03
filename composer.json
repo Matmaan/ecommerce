@@ -1,0 +1,12 @@
+{
+    "name": "webforce/ecommerce",
+    "authors": [
+        {
+            "name": "Ambre Saulnier",
+            "email": "ambresaulnier@live.fr"
+        }
+    ],
+    "require": {
+        "fzaninotto/faker": "^1.6"
+    }
+}
