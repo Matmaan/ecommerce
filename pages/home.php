@@ -20,7 +20,7 @@
         </div>
     </div>
     <span id="productList">
-        <?php foreach (getProducts(isset($_GET["nbProducts"]) ?: 12 ) as $article): ?>
+        <?php foreach (getProducts(isset($_SESSION["nbProducts"]) ?: 12 ) as $article): ?>
             <div class="col-md-3 well product" style="height: 300px">
                 <a href="?page=product&article=<?php echo $article->id_product; ?>">
                     <img src="<?php echo $article->image?>" class="img-responsive img-thumbnail">
