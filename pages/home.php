@@ -1,7 +1,7 @@
 <h2>Produits récents</h2>
 
 <!-- Filtre -->
-<div class="col-md-2 bg-primary" style="height: 500px;">
+<div class="filter col-md-2 bg-primary">
     <h3>Filtre</h3>
 </div>
 
