@@ -1,5 +1,5 @@
 <?php
-<<<<<<< HEAD
+
 $username = "root";
 $password = "";
 $host = "localhost";
@@ -12,8 +12,8 @@ $conn = new PDO("mysql:host={$host};dbname={$dbname};charset=utf8", $username, $
 
         $msg = "Failed to connect to the database";
     }
-=======
->>>>>>> refs/remotes/origin/master
+
+
 // Was the form submitted?
 if (isset($_POST["ResetPasswordForm"]))
 {
