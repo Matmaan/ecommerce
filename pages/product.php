@@ -6,7 +6,7 @@
 
 ?>
 
-<div class="container">
+<div class="products">
     <div class="row">
         <div class="col-md-8 well">
             <img class="img-responsive center-block" src="<?php echo $article->image; ?>" alt="">
