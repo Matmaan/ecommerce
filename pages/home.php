@@ -4,7 +4,7 @@ if (!isset($_GET["page"])) {
     header("location: ?page=home");
 }
 ?>
-<h2>Produits récents</h2>
+<h2>Bonheurs récents</h2>
 
 <!-- Filtre -->
 <div class="filter col-md-2">
