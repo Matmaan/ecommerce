@@ -14,8 +14,7 @@ if (!isset($_GET["page"])) {
         <?php $maxPrice = getMaxPrice();
         $nbCat = 10;
         for ($i=0; $i < $nbCat; $i++): ?>
-            <br>
-            <li> <a href=""><?= intval($maxPrice / $nbCat * $i)." à ".intval($maxPrice / $nbCat * ($i+1)) ?> EUR</a> </li>
+            <li> <a href=""><?= intval($maxPrice / $nbCat * $i)." à ".intval($maxPrice / $nbCat * ($i+1)) ?> EUR</a> </li><br>
         <?php endfor; ?>
     </ul>
 </div>
