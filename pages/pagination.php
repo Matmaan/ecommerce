@@ -6,9 +6,21 @@ require_once '../config.php';
 session_name("Ecommerce");
 session_start();
 var_dump($_SESSION);
+var_dump($_GET);
 
+if ($_GET["category"] == "null") {
+    echo "category null";
+    unset($_GET["category"]);
+}
+
+if ($_GET["npage"] == "null") {
+    echo "nbpages null";
+    $_GET["npage"] = 1;
+}
+
+var_dump($_GET);
 // Récuperation de la page actuel
-$_SESSION["currentPage"] = isset($_GET["npage"]) ? $_GET["npage"] : 1 ;
+// $_SESSION["currentPage"] = isset($_GET["npage"]) ? $_GET["npage"] : 1 ;
 
 // Nombre de produits total (avec filtre de catégorie)
 if(isset($_GET["category"])) {
