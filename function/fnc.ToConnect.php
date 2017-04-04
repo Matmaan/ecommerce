@@ -27,11 +27,11 @@ if (!empty($_POST)) {
 		if (password_verify($password, $user->password)) {
     		$_SESSION['user'] = $user;
             header("location: ?page=home");
-        	}
-	} else {
+        	} else {
     		echo "<li>Pseudo ou mot de passe incorrect.</li>";
     	}
 
+	} 
 
 }
 
