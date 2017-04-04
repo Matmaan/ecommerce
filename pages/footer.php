@@ -5,7 +5,7 @@
 
         <!-- Footer -->
         <footer class="main-footer">
-            <div class="container text-center">
+            <div class="container text-center textFooter">
                 &copy; 2017 - Ecommerce | <a href="?page=1">Contact</a> | <a href="?page=2">Mentions légales</a>
             </div>
         </footer>

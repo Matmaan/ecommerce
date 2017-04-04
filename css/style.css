@@ -1,9 +1,21 @@
 /*-----------
     GENERAL
 ----------*/
-.img-responsive{
-    width: 100%;
+body{
+    background-image:url("../img/pexels-photo-132800.jpeg");
+    background-attachment: fixed;
+    background-size: 100%;
 }
+
+@media all and (max-width:1039px){
+	body{
+        background-image:url("../img/pexels-photo-132800.jpeg");
+        background-attachment: fixed;
+        background-repeat: repeat-y;
+
+	}
+}
+
 .minia {
     filter: grayscale(35%);
 }
@@ -11,15 +23,23 @@
     filter: grayscale(0%);
 }
 
-body{
-    background-image:url("../img/pexels-photo-132800.jpeg");
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    background-size: 100%;
-
+.img-responsive{
+    width: 100%;
 }
+
+.filter {
+    background-image: url(../img/cloud.png);
+    background-size: 100%;
+    width: 180px;
+    height: 100px;
+}
+
+.filter h3{
+    padding:10px;
+}
+
 h1, h2{
-    color:  #000080;
+    color: #000080;
     font-family: 'Indie Flower', cursive;
 }
 
@@ -28,20 +48,19 @@ h3, h4{
     font-family: 'Montserrat', sans-serif;
 }
 
-.main-content .container {
-    background-color:rgba(255, 245, 238, 0.7);
+.textFooter, .textFooter a{
+    color: oldlace;
 }
 
-.filter{
-    height: 500px;
-    background-color:rgba(0, 0, 128, 0.2);
-}
+.fontContainer{
+    background-color:rgba(255, 245, 238, 0.3);
 
+}
 /*----------------
     MENU PRINCIPAL
 -----------------*/
-.main-header .navbar .container{
-     background-color:rgba(255, 245, 238, 0.7);
+.main-header .navbar .navContainer{
+    background-color:rgba(255, 245, 238, 0.7);
     font-family: 'Indie Flower', cursive;
     font-size: 17px;
     width:100%;
@@ -82,20 +101,42 @@ form.to_connect, .to_inscription {
     font-size: 14px;
     font-family: 'Montserrat', sans-serif;
     height: 300px;
-    padding:10px;
+    padding:50px;
 }
 
 form.to_connect, .to_inscription, label{
     margin:10px;
 }
 
-form.add_article{
+.articlesForm{
+    height: 700px;
+    background-image:url("../img/sky.jpeg");
+    background-size: 100%;
     color: #000080;
     font-size: 14px;
     font-family: 'Montserrat', sans-serif;
+    border-radius: 38px;
 }
+
 .sentence{
+    font-weight: bold;
     font-size: 25px;
     font-family: 'Indie Flower', cursive;
     color: #000080;
+}
+
+
+/*---------------
+    PRESENTATION
+        PRODUITS
+---------------*/
+.product{
+    background-color:rgba(255, 245, 238, 1);
+}
+
+.textProduct{
+    padding: 35px;
+    color: #000080;
+    font-family: 'Montserrat', sans-serif;
+    text-align: justify;
 }
