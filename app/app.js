@@ -17,6 +17,7 @@ function $_GET(param) {
 }
 
 $("#nbProducts").on("change", function() {
+
     if(!$_GET("category")){
         // Si aucune categorie n'est appliqué
         // console.log($(this).val());
@@ -73,7 +74,6 @@ $("#quantity").on("change", function() {
 
 
 // Add products to DB
-
 // var img = "http://placehold.it/150/24f355";
 // $.ajax("https://jsonplaceholder.typicode.com/posts").done(function (json) {
 //     console.log(json);

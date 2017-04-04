@@ -5,8 +5,8 @@
 
         <!-- Footer -->
         <footer class="main-footer">
-            <div class="container text-center">
-                &copy; 2017 - Ecommerce | <a href="?page=contact">Contact</a> | <a href="?page=mentions">Mentions légales</a>
+            <div class="container text-center textFooter">
+                &copy; 2017 - Ecommerce | <a href="?page=1">Contact</a> | <a href="?page=2">Mentions légales</a>
             </div>
         </footer>
 
