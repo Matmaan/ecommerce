@@ -1,4 +1,5 @@
 <?php
+// Update les produits à afficher en ajax
 require_once '../function/model.php';
 require_once '../config.php';
 

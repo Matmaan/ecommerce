@@ -30,9 +30,14 @@ if (!isset($_GET["page"])) {
     </div>
 
     <!-- Si la catégorie est définie -->
+    <?php isset($_SESSION["nbProducts"]) ? : $_SESSION["nbProducts"] = 24 ?>
     <?php if(isset($_GET["category"])): ?>
         <span id="productList">
-            <?php foreach ( getProductsByCategory(isset($_SESSION["nbProducts"]) ? $_SESSION["nbProducts"]: 24,  ($_GET["category"]), (isset($_GET["npage"]) ?$_GET["npage"] - 1:0)*$_SESSION["nbProducts"]) as $article): ?>
+            <?php foreach ( getProductsByCategory(
+                        isset($_SESSION["nbProducts"]) ? $_SESSION["nbProducts"] : 24,
+                        ($_GET["category"]),
+                        (isset($_GET["npage"]) ? $_GET["npage"] - 1 : 0) * $_SESSION["nbProducts"]
+                    ) as $article ): ?>
                 <div class="col-md-3 well product" style="height: 300px">
                     <a href="?page=product&article=<?php echo $article->id_product; ?>">
                         <img src="<?php echo $article->image?>" class="img-responsive img-thumbnail">
@@ -45,10 +50,14 @@ if (!isset($_GET["page"])) {
     <!-- Si la catégorie n'est pas définie -->
     <?php else: ?>
         <span id="productList">
-            <?php foreach (getProducts(isset($_SESSION["nbProducts"]) ?$_SESSION["nbProducts"]: 24, (isset($_GET["npage"]) ?$_GET["npage"] - 1:0)*$_SESSION["nbProducts"] ) as $article): ?>
+            <?php foreach (getProducts(
+                        isset($_SESSION["nbProducts"]) ? $_SESSION["nbProducts"] : 24,
+                        (isset($_GET["npage"]) ?$_GET["npage"] - 1:0) * $_SESSION["nbProducts"]
+                    ) as $article): ?>
                 <div class="col-md-3 well product" style="height: 300px">
                     <a href="?page=product&article=<?php echo $article->id_product; ?>">
                         <img src="<?php echo $article->image?>" class="img-responsive img-thumbnail">
+                        <h4><?php echo $article->id_product; ?></h4>
                         <h4><?php echo $article->name; ?></h4>
                     </a>
                     <h4><?php echo $article->price; ?> €</h4>
@@ -74,7 +83,7 @@ if(isset($_GET["category"])) {
 }
 
 // Nombre de page selon le nombre de produits par page demande par l'utilisateur
-$nbPages = ceil( $nbrProducts[0] / $_SESSION["nbProducts"] );
+$nbPages = ceil( $nbrProducts[0] / (isset($_SESSION["nbProducts"]) ? $_SESSION["nbProducts"] : 24) );
 
 ?>
 
@@ -110,7 +119,6 @@ $nbPages = ceil( $nbrProducts[0] / $_SESSION["nbProducts"] );
                 <li><a class="nextpostslink" rel="next" href="?page=<?php echo $_GET["page"] ?><?php echo $category; ?>&npage=<?php echo $_SESSION["currentPage"]+1; ?>">»</a></li>
                 <li><a class="last" href="?page=<?php echo $_GET["page"] ?><?php echo $category; ?>&npage=<?php echo $nbPages; ?>">Last »</a></li>
             <?php endif; ?>
-
         </ul>
     </nav>
 </nav>
