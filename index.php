@@ -8,6 +8,8 @@ require_once 'function/model.php';
 
 require_once 'pages/header.php';
 
+// var_dump($_SESSION);
+
 // Main content
 if (isset($_GET["page"])) {
     if ( file_exists( 'pages/'.$_GET["page"].".php" ) ){
