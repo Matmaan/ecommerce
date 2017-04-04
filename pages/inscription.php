@@ -11,6 +11,6 @@ include_once 'function/fnc.AddUser.php';
 		<label for="pswd" class="">Mot de passe :</label>
 		<input type="password" name="pswd" class="form-control">
 		<br>
-		<button type="submit" class="btn btn-default btn-primary">Inscription</button>
+		<button type="submit" class="btn">Inscription</button>
 	</form>
 </main>

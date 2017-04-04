@@ -14,11 +14,9 @@
         <!-- Header -->
         <header class="main-header">
             <nav class="navbar navbar-default">
-
-                <div class="container">
+                <div class="container navContainer">
                     <div class="navbar-header">
                         <a class="navbar-brand" href="?page=home">Ecommerce</a>
-
                     </div>
 
                     <div>
@@ -32,7 +30,7 @@
                         <ul class="nav navbar-nav navbar-right">
                         <?php if (isset($_SESSION['user'])) :?>
                             <li class="<?= ($_GET["page"]=="contact-profile")? "active" : "" ; ?>"><a href="?page=contact-profile">
-                                <?= "Bonjour".($_SESSION['user']->login); ?>
+                                <?= "Bonjour ".($_SESSION['user']->login); ?>
                             </a></li>
                         <?php else: ?>
                             <li class="<?= ($_GET["page"]=="inscription")? "active" : "" ; ?>"><a href="?page=inscription">Inscription</a></li>
