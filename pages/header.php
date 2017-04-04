@@ -7,52 +7,46 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
         <link rel="stylesheet" href="css/style.css">
         <link href="https://fonts.googleapis.com/css?family=Indie+Flower|Montserrat" rel="stylesheet">
-
     </head>
+
     <body>
 
         <!-- Header -->
         <header class="main-header">
             <nav class="navbar navbar-default">
-              <div class="container">
-                <!-- Brand and toggle get grouped for better mobile display -->
-                <div class="navbar-header">
-                  <a class="navbar-brand" href="?page=home">Ecommerce</a>
-                </div>
 
-                <!-- Collect the nav links, forms, and other content for toggling -->
-                <div>
-                  <ul class="nav navbar-nav">
-                  <?php foreach(getCategories() as $category): ?>
-                      <li class="<?= (isset($_GET["category"]) && $_GET["category"] == $category->id_category)? "active" : "" ;?>"><a href="?page=home&category=<?php echo $category->id_category; ?>"><?php echo $category->category; ?></a></li>
-                  <?php endforeach; ?>
-                  </ul>
+                <div class="container">
+                    <div class="navbar-header">
+                        <a class="navbar-brand" href="?page=home">Ecommerce</a>
 
-                  <ul class="nav navbar-nav navbar-right">
-
-                    <?php
-                      if (empty($_SESSION['user']->login)) {
-                          echo ('<li><a href="?page=inscription">Inscription</a></li>');
-                          echo ('<li><a href="?page=connexion">Connexion</a></li>');
-                      }
-                    ?>
-                    
-                    <?php
-                    if (isset($_SESSION['user'])) {
-                      echo "<li><a href=\"?page=contact-profile\">" . ($_SESSION['user']->login) . "</a></li>";
-                      echo "<li><a href=\"?page=additem\">Ajouter un article</a></li>";
-                    }
-                    ?>
-                  </ul>
-
-                  <form  action="?page=99" class="navbar-form navbar-right">
-                    <div class="form-group">
-                      <input type="text" id="search" class="form-control" placeholder="Rechercher">
                     </div>
-                  </form>
 
-                </div><!-- /.navbar-collapse -->
-              </div><!-- /.container-fluid -->
+                    <div>
+                        <ul class="nav navbar-nav">
+                        <?php foreach(getCategories() as $category): ?>
+                            <li class="<?= (isset($_GET["category"]) && $_GET["category"] == $category->id_category)? "active" : "" ;?>"><a href="?page=home&category=<?php echo $category->id_category; ?>"><?php echo $category->category; ?></a></li>
+                        <?php endforeach; ?>
+                        </ul>
+
+                        <!-- Inscription, connexion OU Profil -->
+                        <ul class="nav navbar-nav navbar-right">
+                        <?php if (isset($_SESSION['user'])) :?>
+                            <li class="<?= ($_GET["page"]=="contact-profile")? "active" : "" ; ?>"><a href="?page=contact-profile">
+                                <?= "Bonjour".($_SESSION['user']->login); ?>
+                            </a></li>
+                        <?php else: ?>
+                            <li class="<?= ($_GET["page"]=="inscription")? "active" : "" ; ?>"><a href="?page=inscription">Inscription</a></li>
+                            <li class="<?= ($_GET["page"]=="connexion")? "active" : "" ; ?>"><a href="?page=connexion">Connexion</a></li>
+                        <?php endif; ?>
+                        </ul>
+
+                        <form  action="?page=99" class="navbar-form navbar-right">
+                            <div class="form-group">
+                                <input type="text" id="search" class="form-control" placeholder="Rechercher">
+                            </div>
+                        </form>
+                    </div><!-- /.navbar-collapse -->
+                </div><!-- /.container-fluid -->
             </nav>
         </header>
 

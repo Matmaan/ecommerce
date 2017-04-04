@@ -78,8 +78,6 @@ $nbPages = ceil( $nbrProducts[0] / $_SESSION["nbProducts"] );
 
 ?>
 
-<?php var_dump($_SESSION); ?>
-
 
 <!--                         -->
 <!--        Pagination       -->
