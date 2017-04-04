@@ -20,7 +20,7 @@ if (!isset($_GET["page"])) {
             <form class="pull-right">
                 Nombre de produits par pages :
                 <select name="" id="nbProducts">
-                    <option value="" selected disabled><?php echo $_SESSION["nbProducts"] ?></option>
+                    <option value="" selected disabled><?= isset($_SESSION["nbProducts"]) ? $_SESSION["nbProducts"] : 24 ; ?></option>
                     <option value="48">48</option>
                     <option value="36">36</option>
                     <option value="24">24</option>
@@ -32,7 +32,7 @@ if (!isset($_GET["page"])) {
     <!-- Si la catégorie est définie -->
     <?php if(isset($_GET["category"])): ?>
         <span id="productList">
-            <?php foreach ( getProductsByCategory(isset($_SESSION["nbProducts"]) ?$_SESSION["nbProducts"]: 24,  ($_GET["category"]), (isset($_GET["npage"]) ?$_GET["npage"] - 1:0)*$_SESSION["nbProducts"]) as $article): ?>
+            <?php foreach ( getProductsByCategory(isset($_SESSION["nbProducts"]) ? $_SESSION["nbProducts"]: 24,  ($_GET["category"]), (isset($_GET["npage"]) ?$_GET["npage"] - 1:0)*$_SESSION["nbProducts"]) as $article): ?>
                 <div class="col-md-3 well product" style="height: 300px">
                     <a href="?page=product&article=<?php echo $article->id_product; ?>">
                         <img src="<?php echo $article->image?>" class="img-responsive img-thumbnail">
