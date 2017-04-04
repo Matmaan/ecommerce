@@ -10,7 +10,11 @@ require_once 'pages/header.php';
 
 // Main content
 if (isset($_GET["page"])) {
-    require_once 'pages/'.$_GET["page"].".php";
+    if ( file_exists( 'pages/'.$_GET["page"].".php" ) ){
+        include_once 'pages/'.$_GET["page"].".php";
+    } else {
+        include_once 'pages/'.'404'.".php";
+    }
 } else {
     require_once 'pages/home.php';
 }

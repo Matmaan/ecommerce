@@ -1,8 +1,16 @@
+<?php
+
+if (!isset($_GET["page"])) {
+    header("location: ?page=home");
+}
+?>
 <h2>Produits récents</h2>
 
 <!-- Filtre -->
-<div class="filter col-md-2 bg-primary">
+<div class="filter col-md-2">
     <h3>Filtre</h3>
+
+
 </div>
 
 <!-- Products -->
@@ -70,6 +78,7 @@ $nbPages = ceil( $nbrProducts[0] / $_SESSION["nbProducts"] );
 
 ?>
 
+<?php var_dump($_SESSION); ?>
 
 
 <!--                         -->
