@@ -32,7 +32,7 @@
                         <ul class="nav navbar-nav navbar-right">
                         <?php if (isset($_SESSION['user'])) :?>
                             <li class="<?= ($_GET["page"]=="contact-profile")? "active" : "" ; ?>"><a href="?page=contact-profile">
-                                <?= "Bonjour".($_SESSION['user']->login); ?>
+                                <?= "Bonjour ".($_SESSION['user']->login); ?>
                             </a></li>
                         <?php else: ?>
                             <li class="<?= ($_GET["page"]=="inscription")? "active" : "" ; ?>"><a href="?page=inscription">Inscription</a></li>
