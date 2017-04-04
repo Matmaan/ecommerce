@@ -5,7 +5,6 @@ session_start();
 require_once 'config.php';
 require_once 'function/model.php';
 
-
 require_once 'pages/header.php';
 
 // echo "<pre>";

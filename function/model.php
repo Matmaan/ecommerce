@@ -28,7 +28,6 @@ function setUser($pseudo, $email, $password) {
 
 
 function countProducts(){
-
     global $bdd;
     $query = $bdd->query("SELECT COUNT(*) FROM product");
 
@@ -40,6 +39,18 @@ function countProductsByCategory($id_cat){
 
     return $query->fetch();
 }
+
+
+function getMaxPrice(){
+    global $bdd;
+    $query = $bdd->query("SELECT MAX(price) FROM product");
+
+    $result = $query->fetch();
+    return $result[0];
+}
+
+
+//SELECT * FROM `product` WHERE price > 0 AND price < 50
 
 
 function getProducts($nbProducts, $offset = 0) {
