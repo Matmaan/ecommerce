@@ -1,8 +1,16 @@
+<?php
+
+if (!isset($_GET["page"])) {
+    header("location: ?page=home");
+}
+?>
 <h2>Produits récents</h2>
 
 <!-- Filtre -->
 <div class="filter col-md-2 bg-primary">
     <h3>Filtre</h3>
+
+
 </div>
 
 <!-- Products -->
