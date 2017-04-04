@@ -2,11 +2,12 @@
 // include 'header.php';
 include_once 'function/fnc.AddItem.php';
  ?>
+
         <div class="container text-center">
             <p class="sentence">Racontez-nous votre rêve...</p>
         </div>
-        <div class="container">
-            <form class="add_article" method="POST">
+        <div class="container articlesForm">
+            <form method="POST">
                 <div class="form-group">
                     <label for="name" class="control-label">Nom du rêve</label>
                     <input type="text" name="name" value="" class="form-control">
@@ -40,6 +41,7 @@ include_once 'function/fnc.AddItem.php';
                     <input type="text" class="form-control" id="quantity" name="quantity">
                 </div>
 
-                <button type="submit" class="btn btn-info">Valider</button>
+                <button type="submit" class="btn">Valider</button>
             </form>
         </div>
+        

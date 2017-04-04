@@ -14,7 +14,7 @@
         <!-- Header -->
         <header class="main-header">
             <nav class="navbar navbar-default">
-              <div class="container">
+              <div class="container navContainer">
                 <!-- Brand and toggle get grouped for better mobile display -->
                 <div class="navbar-header">
                   <a class="navbar-brand" href="?page=home">Ecommerce</a>
