@@ -44,7 +44,7 @@ if (!isset($_GET["page"])) {
                         ($_GET["category"]),
                         (isset($_GET["npage"]) ? $_GET["npage"] - 1 : 0) * $_SESSION["nbProducts"]
                     ) as $article ): ?>
-                <div class="col-md-3 well product" style="height: 300px">
+                <div class="col-md-3 well product" style="height: 360px">
                     <a href="?page=product&article=<?php echo $article->id_product; ?>">
                         <img src="<?php echo $article->image?>" class="img-responsive img-thumbnail">
                         <h4><?php echo $article->name; ?></h4>
@@ -60,7 +60,7 @@ if (!isset($_GET["page"])) {
                         isset($_SESSION["nbProducts"]) ? $_SESSION["nbProducts"] : 24,
                         (isset($_GET["npage"]) ?$_GET["npage"] - 1:0) * $_SESSION["nbProducts"]
                     ) as $article): ?>
-                <div class="col-md-3 well product" style="height: 300px">
+                <div class="col-md-3 well product" style="height: 360px">
                     <a href="?page=product&article=<?php echo $article->id_product; ?>">
                         <img src="<?php echo $article->image?>" class="img-responsive img-thumbnail">
                         <h4><?php echo $article->name; ?></h4>
