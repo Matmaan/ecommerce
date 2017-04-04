@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Client :  127.0.0.1
--- Généré le :  Mar 04 Avril 2017 à 11:05
+-- Généré le :  Mar 04 Avril 2017 à 13:45
 -- Version du serveur :  10.1.19-MariaDB
 -- Version de PHP :  5.6.28
 
@@ -274,7 +274,19 @@ INSERT INTO `product` (`id_product`, `id_category`, `name`, `description`, `imag
 (216, 1, 'quas fugiat ut perspiciatis vero provident', 'eum non blanditiis soluta porro quibusdam voluptas\nvel voluptatem qui placeat dolores qui velit aut\nvel inventore aut cumque culpa explicabo aliquid at\nperspiciatis est et voluptatem dignissimos dolor itaque sit nam', 'http://placehold.it/150/c96241', 1214, 100),
 (217, 4, 'laboriosam dolor voluptates', 'doloremque ex facilis sit sint culpa\nsoluta assumenda eligendi non ut eius\nsequi ducimus vel quasi\nveritatis est dolores', 'http://placehold.it/150/197d29', 26278, 100),
 (218, 1, 'temporibus sit alias delectus eligendi', 'quo deleniti praesentium dicta non quod\naut est molestias\nmolestias et officia quis nihil\nitaque dolorem quia', 'http://placehold.it/150/c96241', 21612, 100),
-(219, 2, 'at nam consequatur ea labore ea harum', 'cupiditate quo est a modi nesciunt soluta\nipsa voluptas error itaque dicta in\nautem qui minus magnam et distinctio eum\naccusamus ratione error aut', 'http://placehold.it/150/d32776', 3220, 100);
+(219, 2, 'at nam consequatur ea labore ea harum', 'cupiditate quo est a modi nesciunt soluta\nipsa voluptas error itaque dicta in\nautem qui minus magnam et distinctio eum\naccusamus ratione error aut', 'http://placehold.it/150/d32776', 3220, 100),
+(220, 2, 'Rêve torride avec Megan Fox.', 'Il faut le vivre pour le croire.', 'http://portfolio.soirmag.lesoir.be/main.php?g2_view=core.DownloadItem&g2_itemId=56258&g2_serialNumber=2', 80, 1000000),
+(221, 2, 'Nuit de partage avec Jennifer Lawrence', 'Amazing !!!!!', 'http://breakforbuzz.com/wp-content/uploads/2015/09/tumblr_meobf1iLQ01qcga5ro1_500-L.jpg-150x150.jpg', 99, 500000),
+(222, 2, 'Nuit d''aventure fougueuse avec Evangeline Lilly', 'Séance sportive avec Evangeline.', 'http://i1.wp.com/www.onrembobine.fr/wp-content/uploads/2012/01/p4-60-wallpaper-evangeline-lilly.jpg?resize=150%2C150', 75, 200000),
+(223, 2, 'Nuit Chevaleresque avec Sophie Turner', 'Venez mener la quête de votre vie avec Sophie Turner.', 'https://i0.wp.com/celebsbios.com/wp-content/uploads/2016/03/Sophie-Turner-3.jpg?resize=150%2C150', 120, 50000),
+(224, 2, 'Nuit de tendresse', 'Fantasme de beaucoup d''hommes', 'https://scontent.cdninstagram.com/t51.2885-19/s150x150/12269985_1525397891108979_271901916_a.jpg', 500, 99),
+(225, 2, 'A tous les nostalgiques', 'Clara !', 'http://www.tout-pour-ton-mobile.com/wp-content/uploads/2013/05/application-sexy-clara-morgane-offerte-150x150.jpg', 20, 500),
+(226, 2, 'Aventure futuriste', 'Venez rencontrer Shailene', 'http://whosdatedwho.net/wp-content/uploads/2015/12/Shailene-Woodley-Whos-Dated-Who-150x150.jpg', 69, 69),
+(227, 2, 'Le paradis de Ambre', 'Venez rêver du rêve de Ambre', 'http://photos.tuxboard.com/wp-content/uploads/2009/11/Eva-Green-nue-150x150.jpg', 10000, 5),
+(228, 2, 'Un rêve magique', 'Yolo !', 'http://heightandweights.com/wp-content/uploads/2014/10/Emma-Watson-Boobs-Size-150x150.jpg', 50000, 30),
+(229, 2, 'Un ange venu du ciel, Emilia Clarke', 'Emilia Clarke', 'http://www.thebloggerscinemaclub.com/wp-content/uploads/2013/12/Emilia-Clarke-emilia-clarke-35315138-850-1131-150x150.jpg', 500, 122),
+(230, 2, 'Venez vous faire une amie.', 'Venez vous faire une amie.', 'http://brandandcelebrities.com/wp-content/uploads/2013/05/Jennifer-aniston-ambassadrice-living-proof-shampoing-e1368627524530.jpg', 514, 500),
+(231, 2, 'Venez découvrir la profondeur de ... la musique de Shakira', 'Yolo', 'http://www.baya.tn/wp-content/uploads/2016/09/shakira-nrjwordmusic-2016-150x150.jpg', 500, 44);
 
 -- --------------------------------------------------------
 
@@ -299,7 +311,8 @@ INSERT INTO `users` (`id_user`, `email`, `password`, `role`, `login`, `registere
 (28, 'user@domain.com', '$2y$10$oi.EVCZ5VSa/kytrscXS/Om68V31UGAqy9WdJ32SxhIns/PzldDEe', 'user', 'azert12#AA', '2017-03-31 17:25:08'),
 (30, 'user@domain.com1', '$2y$10$CtIVpjQ63cUkGwOj6VTOX.mNXY2ngr3KBPAjWG7jgrWgV..zjJAPy', 'user', 'aaaaz', '2017-04-03 11:30:04'),
 (32, 'user@domain.com12', '$2y$10$TqBPK2lIoeCg4XsUEf.F2eOIFwXApy69Jp.BMaZWQnj4wTYpEAyim', 'user', 'gggg', '2017-04-03 11:40:44'),
-(33, 'user@domain.com124', '$2y$10$GJ05VN9zN157nYqUsCPl2.G4zxNZEmwkdg93Qroyc8EgfFXCUdNfO', 'user', 'aaZZ##11', '2017-04-03 17:31:00');
+(33, 'user@domain.com124', '$2y$10$GJ05VN9zN157nYqUsCPl2.G4zxNZEmwkdg93Qroyc8EgfFXCUdNfO', 'user', 'aaZZ##11', '2017-04-03 17:31:00'),
+(34, 'briattemathieu@yahoo.fr', '$2y$10$CxudKKSR0AdID8UC/kOl5..hqCw4iUbAiIOVAsMwu6lNNZf.MUtEy', 'writer', 'Matmaan', '2017-04-04 11:26:51');
 
 --
 -- Index pour les tables exportées
@@ -338,12 +351,12 @@ ALTER TABLE `category`
 -- AUTO_INCREMENT pour la table `product`
 --
 ALTER TABLE `product`
-  MODIFY `id_product` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=220;
+  MODIFY `id_product` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=232;
 --
 -- AUTO_INCREMENT pour la table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=34;
+  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=35;
 --
 -- Contraintes pour les tables exportées
 --
