@@ -7,7 +7,7 @@ session_start(); ?>
     <div class="col-md-3 well product" style="height: 300px">
         <a href="?page=product&article=<?php echo $article->id_product; ?>">
             <img src="<?php echo $article->image?>" class="img-responsive img-thumbnail">
-            <h3><?php echo $article->name; ?></h3>
+            <h4><?php echo $article->name; ?></h4>
         </a>
         <h4><?php echo $article->price; ?> €</h4>
     </div>
