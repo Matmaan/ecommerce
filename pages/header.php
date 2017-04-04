@@ -14,9 +14,11 @@
         <!-- Header -->
         <header class="main-header">
             <nav class="navbar navbar-default">
+
                 <div class="container">
                     <div class="navbar-header">
                         <a class="navbar-brand" href="?page=home">Ecommerce</a>
+
                     </div>
 
                     <div>
