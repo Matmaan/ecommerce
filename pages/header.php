@@ -36,15 +36,13 @@
                           echo ('<li><a href="?page=connexion">Connexion</a></li>');
                       }
                     ?>
-                    <li><a href="?page=additem">Ajouter un article</a></li>
-                    <li><a href="?page=contact-profile">
+                    
                     <?php
                     if (isset($_SESSION['user'])) {
-                      echo ($_SESSION['user']->login);
+                      echo "<li><a href=\"?page=contact-profile\">" . ($_SESSION['user']->login) . "</a></li>";
+                      echo "<li><a href=\"?page=additem\">Ajouter un article</a></li>";
                     }
                     ?>
-
-                    </a></li>
                   </ul>
 
                   <form  action="?page=99" class="navbar-form navbar-right">
