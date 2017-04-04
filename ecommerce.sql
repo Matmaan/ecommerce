@@ -311,7 +311,7 @@ INSERT INTO `users` (`id_user`, `email`, `password`, `role`, `login`, `registere
 (28, 'user@domain.com', '$2y$10$oi.EVCZ5VSa/kytrscXS/Om68V31UGAqy9WdJ32SxhIns/PzldDEe', 'user', 'azert12#AA', '2017-03-31 17:25:08'),
 (30, 'user@domain.com1', '$2y$10$CtIVpjQ63cUkGwOj6VTOX.mNXY2ngr3KBPAjWG7jgrWgV..zjJAPy', 'user', 'aaaaz', '2017-04-03 11:30:04'),
 (32, 'user@domain.com12', '$2y$10$TqBPK2lIoeCg4XsUEf.F2eOIFwXApy69Jp.BMaZWQnj4wTYpEAyim', 'user', 'gggg', '2017-04-03 11:40:44'),
-(33, 'user@domain.com124', '$2y$10$GJ05VN9zN157nYqUsCPl2.G4zxNZEmwkdg93Qroyc8EgfFXCUdNfO', 'user', 'aaZZ##11', '2017-04-03 17:31:00'),
+(33, 'user@domain.com124', '$2y$10$GJ05VN9zN157nYqUsCPl2.G4zxNZEmwkdg93Qroyc8EgfFXCUdNfO', 'admin', 'aaZZ##11', '2017-04-03 17:31:00'),
 (34, 'briattemathieu@yahoo.fr', '$2y$10$CxudKKSR0AdID8UC/kOl5..hqCw4iUbAiIOVAsMwu6lNNZf.MUtEy', 'writer', 'Matmaan', '2017-04-04 11:26:51');
 
 --
