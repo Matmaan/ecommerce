@@ -20,7 +20,7 @@ $("#nbProducts").on("change", function() {
 
     if(!$_GET("category")){
         // Si aucune categorie n'est appliqué
-        console.log($(this).val());
+        // console.log($(this).val());
         $.ajax({
             url: "pages/productList.php?nbProducts="+$(this).val(),
             type: "GET"
@@ -29,7 +29,16 @@ $("#nbProducts").on("change", function() {
             $("#nbProducts option:disabled").html($("#nbProducts").val());
             // Refresh list
             $("#productList").html(page);
-            console.log("refreshed");
+
+            // Update pagination
+            $.ajax({
+                url: "pages/pagination.php?page="+$_GET("page") + "&category=" + $_GET("category") + "&npage=" + $_GET("npage"),
+                type: "GET"
+            }).done(function(pagination) {
+                $(".navigation").html(pagination);
+                console.log(pagination);
+            });
+
         });
     } else {
         $.ajax({
@@ -40,7 +49,16 @@ $("#nbProducts").on("change", function() {
             $("#nbProducts option:disabled").html($("#nbProducts").val());
             // Refresh list
             $("#productList").html(page);
-            console.log("refreshed");
+
+            // Update pagination
+            $.ajax({
+                url: "pages/pagination.php?page="+$_GET("page") + "&category=" + $_GET("category") + "&npage=" + $_GET("npage"),
+                type: "GET"
+            }).done(function(pagination) {
+                $(".navigation").html(pagination);
+                console.log(pagination);
+            });
+
         });
     }
 });

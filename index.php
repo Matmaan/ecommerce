@@ -5,10 +5,14 @@ session_start();
 require_once 'config.php';
 require_once 'function/model.php';
 
-
 require_once 'pages/header.php';
 
+// echo "<pre>";
 // var_dump($_SESSION);
+// echo "</pre>";
+// echo "<pre>";
+// var_dump($_GET);
+// echo "</pre>";
 
 // Main content
 if (isset($_GET["page"])) {
