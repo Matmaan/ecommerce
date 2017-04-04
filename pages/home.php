@@ -9,8 +9,15 @@ if (!isset($_GET["page"])) {
 <!-- Filtre -->
 <div class="filter col-md-2">
     <h3>Filtre</h3>
-
-
+    <h4>Prix</h4>
+    <ul class="filter-price">
+        <?php $maxPrice = getMaxPrice();
+        $nbCat = 10;
+        for ($i=0; $i < $nbCat; $i++): ?>
+            <br>
+            <li> <a href=""><?= intval($maxPrice / $nbCat * $i)." à ".intval($maxPrice / $nbCat * ($i+1)) ?> EUR</a> </li>
+        <?php endfor; ?>
+    </ul>
 </div>
 
 <!-- Products -->
